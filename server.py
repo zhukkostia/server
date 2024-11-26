@@ -18,10 +18,7 @@ def start_tcp_server():
     while True:
         client_socket, client_address = server_socket.accept()
         print(f"Підключено: {client_address}")
-        data = client_socket.recv(1024).decode()
-        print(f"Отримано від {client_address}: {data}")
-        client_socket.sendall(f"Привіт, {client_address}. Ви сказали: {data}".encode())
-        client_socket.close()
+       
 
 
 threading.Thread(target=start_tcp_server, daemon=True).start()
