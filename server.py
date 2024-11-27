@@ -11,7 +11,6 @@ def read_root():
 
 def start_tcp_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(("35.157.117.28", 5999))  
     server_socket.listen(5)
     print("TCP-сервер запущено")
 
